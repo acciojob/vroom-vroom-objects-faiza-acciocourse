@@ -1,15 +1,20 @@
 // Complete the js code
-function Car(make, model) {
-	getMakeModel() {
-		returns make+" "+model;
+const car = {
+	constructor(make:string, model:string) {
+		this.make = make;
+		this.model = model;
 	}
-}
+	getMakeModel: function(){
+		return this.make+" "+this.model;
+	}
+};
 
-function SportsCar(make, model, topSpeed) extends Car{
-	getTopSpeed() {
-		return topSpeed;
+const sportsCar = Object.create(car,topSpeed);
+sportsCar.getTopSpeed = function(){
+		return this.topSpeed;
 	}
-}
+
+
 
 // Do not change the code below
 window.Car = Car;
