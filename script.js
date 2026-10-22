@@ -10,9 +10,16 @@ const car = {
 };
 
 const sportsCar = Object.create(car,topSpeed);
-sportsCar.getTopSpeed = function(){
+sportsCar = {
+	constructor(make:string,model:string,topSpeed:number) {
+		super(this.make,this.model);
+		this.topSpeed = topSpeed;
+	}
+
+	getTopSpeed: function() {
 		return this.topSpeed;
 	}
+}
 
 
 
